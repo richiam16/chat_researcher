@@ -72,17 +72,27 @@ def vectorstore(documents, embedding_function, directory):
 	vectordb = Chroma.from_documents(documents=documents,embedding=embedding_function,persist_directory=directory)
 	return vectordb
 
+# rag versions
 
-def rag_chain(template, retriever, llm):
-	"""FUnction to create a simple rag chain LLM answer and question
+def get_name(name):
+	return name
+
+def rag_chain(template, name,  retriever, llm):
+	"""Function to create a simple rag chain LLM answer and question
 	Args:
 		template: The prompt template to feed to the rag chain
+		name: The name of the researcher
 		retriever: The information where the embeddings are stored (for vectorstore)
 		llm: The Large Languague model to be used for the ragchain
-	Return:
-		rag_chain: an object from langchain able to answer questions from the papers without history"""
-	rag_prompt_custom = PromptTemplate.from_template(template)
-	rag_ = ({"context": retriever, "question": RunnablePassthrough()} | rag_prompt_custom | llm)
+	Returns:
+		rag_: an object from langchain able to answer questions from the papers without history"""
+		
+	# Making a wrapping function to get the name variable as a function to work with Langchain implementation
+	def get_name(_):
+		return name
+	name_runnable = RunnablePassthrough(get_name)
+	rag_prompt_custom = PromptTemplate(input_variables=["name","context","question"],template=template)
+	rag_ = ({"name":name_runnable, "context": retriever, "question": RunnablePassthrough()} | rag_prompt_custom | llm)
 	return rag_
 
 def rag_chain_conversational(general_system_template, general_user_template, retriever,llm, memory):
@@ -99,11 +109,27 @@ def rag_chain_conversational(general_system_template, general_user_template, ret
 	crc = ConversationalRetrievalChain.from_llm(llm, retriever, combine_docs_chain_kwargs={'prompt': qa_prompt}, memory=memory)
 	return crc 
 
-def make_rag_chain(path, chunk_size, chunk_overlap, embedding_function, directory, llm, template):
-	"""Function to make the whole pipeline of RAG in few lines of code, 
-	also this function has the intention to create a function where it is easy to make changes to the parameters of RAG for testing the performance"""
+# creating function for easy acces
+def loading_vectorstore(path, chunk_size, chunk_overlap, embedding_function, directory):
+	"""Function to make the initial step of the rag pipeline that is loading the pdfs, and creating the vectorstore
+	Args:
+		path: path direction of the pdf files
+		chunk_size:
+		chunk_overlap
+		embedding_function:
+		directory
+	return
+		vectorsotre"""
 	docs = load_papers_pdf(path)
 	splits = text_splitter(docs, chunk_size=chunk_size, chunk_overlap=chunk_overlap)
 	vectordb = vectorstore(documents=splits, embedding_function=embedding_function, directory=directory)
-	rag_ = rag_chain(template=template, retriever=vectordb.as_retriever(), llm=llm)
+	return vectordb
+
+
+def make_rag_chain(retriever,llm, template):
+	"""Function to make the whole pipeline of RAG in few lines of code, 
+	also this function has the intention to create a function where it is easy to make changes to the parameters of RAG for testing the performance, 
+	GIVEN THE CURRENT IMPROVEMENTS, THSI FUNCTION IS NO LONGER NEEDED"""
+	rag_ = rag_chain(template=template, retriever=retriever.as_retriever(), llm=llm)
 	return rag_
+

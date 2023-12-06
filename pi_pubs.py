@@ -1,4 +1,4 @@
-from scholarly import scholarly
+#from scholarly import scholarly
 from tqdm import tqdm
 from Bio import Entrez
 import os
