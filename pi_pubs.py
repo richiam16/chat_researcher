@@ -1,5 +1,5 @@
 #from scholarly import scholarly
-from tqdm import tqdm
+#from tqdm import tqdm
 from Bio import Entrez
 import os
 
@@ -42,11 +42,13 @@ class Researcher(object):
 		else:
 			self.id_list = [] # Note id_list seems to be sorted from newest papers to oldest papers
 
-	def _download_papers(self):
+	def _download_papers(self, path_out=os.getcwd()):
 		"""A method to download the papers from the PubMedId
+		Arguments:
+			path_out: the folde to save the pdfs
 		Note: it would be good to know the progress of the download (aka tqdm)"""
 		files = ",".join(self.id_list)
-		os.system(f"python3 -m pubmed2pdf pdf --pmids={files}")
+		os.system(f"python3 -m pubmed2pdf pdf --pmids={files} --out {path_out}")
 
 	def main(self, email):
 		self._pmdid_collection(email)
