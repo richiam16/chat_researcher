@@ -50,10 +50,9 @@ class Researcher(object):
 		files = ",".join(self.id_list)
 		os.system(f"python3 -m pubmed2pdf pdf --pmids={files} --out {path_out}")
 
-	def main(self, email):
-		self._pmdid_collection(email)
-		self._download_papers()
+	def main(self, email, max_results=10000, path_out=os.getcwd()):
+		self._pmdid_collection(email, max_results)
+		self._download_papers(path_out)
 
 
 # Note: check current notes on problems on the methods
-# Note: Would it be usefull to be terminal based ? (as python pi_subs -name "PI" -email "email")

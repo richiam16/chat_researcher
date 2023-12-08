@@ -22,10 +22,11 @@ import glob
 def load_papers_pdf(path):
 	"""Method to load the documents into langchain methods
 	Args:
-		path: path where the papers are located (pdf or .html format)
+		path: path where the papers are located (pdf)
 	Returns:
 		docs: the documents"""
-	loaders = [PyPDFLoader(doc) for doc in glob.glob(f"{path}/*.pdf")]
+	pdfs = glob.glob(f"{path}/*.pdf")
+	loaders = [PyPDFLoader(doc) for doc in pdfs]
 	docs = []
 	for loader in loaders:
 		docs.extend(loader.load())
@@ -37,7 +38,8 @@ def load_papers_html(path):
 		path: path where the papers are located (pdf or .html format)
 	Returns:
 		docs: the documents
-	Is it a good idea to have two different methods for html and pdf format? """
+	Is it a good idea to have two different methods for html and pdf format?
+	Is it worth loading the html ?"""
 	loaders = [UnstructuredHTMLLoader(doc) for doc in glob.glob(f"{path}/*.html")]
 	docs = []
 	for loader in loaders:
