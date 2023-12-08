@@ -52,6 +52,7 @@ def pi_chat(name,email,number_papers,model_name, path_pubmed="Data/PDFs",path_di
 		# make files to create a local installation (templates and installation)
 		# Check what happens if there is no id_list (stop the program) 
 		# Check what happens if there is no docs, ie there are no PDFs in the folder ? (stop the program)
+		# Make a folder per PI so that the program does not create use already download papers
 	# HALF-DONE:
 		## PROMPT IN SINGLE FILE, NOT EXPORTABLE -----------There are better ways to add the prompt to this, check in the templates from langchain
 	# Done
