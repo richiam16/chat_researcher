@@ -13,7 +13,8 @@ class Researcher(object):
 	def _pubs_collection(self):
 		""" A method to collect a list of all the publications of the author
 		return:
-			self.publications: A list of scholarly.publications objects with metadata about the publications of the author"""
+			self.publications: A list of scholarly.publications objects with metadata about the publications of the author
+		Deprecated"""
 		search = scholarly.search_author(self.name)	
 		author = scholarly.fill(next(search))
 		self.publications = author["publications"]
@@ -24,7 +25,8 @@ class Researcher(object):
 			Note: For now all the publications will be retrieved (expensive procedure)
 			Note: What is the criteria being used to sort the publications is currently unknown (a sorting by year would be helpfull)
 		return:
-			Note: Is it necesary to retrieve all the information ?, is it possible to "faste" things with fewer information"""
+			Note: Is it necesary to retrieve all the information ?, is it possible to "faste" things with fewer information
+		Depecrated"""
 		for pub in tqdm(self.publications):
 			scholarly.fill(pub)
 
@@ -49,7 +51,7 @@ class Researcher(object):
 		Note: it would be good to know the progress of the download (aka tqdm)"""
 		files = ",".join(self.id_list)
 		os.system(f"python3 -m pubmed2pdf pdf --pmids={files} --out {path_out}")
-
+		
 	def main(self, email, max_results=10000, path_out=os.getcwd()):
 		self._pmdid_collection(email, max_results)
 		self._download_papers(path_out)
