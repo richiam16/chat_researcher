@@ -32,14 +32,14 @@ llm = ChatOpenAI(temperature=0, model="gpt-4")
 #}
 
 # Minimal Schema
-#schema = {
-#	"properties": {
-#	"faculty_name": {"type":"string"},
-#	"faculty_specialty":{"type":"string"},
-#	"faculty_research_topics":{"type":"string"}
-#	},
-#	"required":["faculty_name","faculty_specialty","faculty_research_topics"]
-#}
+schema = {
+	"properties": {
+	"faculty_name": {"type":"string"},
+	"faculty_specialty":{"type":"string"},
+	"faculty_research_topics":{"type":"string"}
+	},
+	"required":["faculty_name","faculty_specialty","faculty_research_topics"]
+}
 
 def extract(content: str, schema: dict):
 	"""fucntion to extract information from the web (webscrapping) with an LLM

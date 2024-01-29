@@ -9,7 +9,7 @@ faculty_name,faculty_specialty,faculty_research_topics
 "Debelouchina, Galia","Biochemistry & Molecular Biophysics, Chemical Biology","NMR Spectroscopy, Structural Biology, Chemical Biology, Aging, Gene Regulation"
 "Deshmukh, Lalit","Biochemistry & Molecular Biophysics, Chemical Biology","Solution NMR spectroscopy, Amyloids, Neurodegenerative diseases, Posttranslational modifications, Viruses"
 "Devaraj, Neal","Biochemistry & Molecular Biophysics, Chemical Biology, Organic Chemistry","Biomimetic Chemistry, Artificial Cells, Chemical Biology"
-"Donoghue, Daniel ","Biochemistry & Molecular Biophysics, Chemical Biology, Materials Chemistry",Receptor Tyrosine Kinases in Human Cancer
+"Donoghue, Daniel","Biochemistry & Molecular Biophysics, Chemical Biology, Materials Chemistry",Receptor Tyrosine Kinases in Human Cancer
 "Ferguson, Fleur","Biochemistry & Molecular Biophysics, Chemical Biology, Organic Chemistry",
 "Figueroa, Joshua","Inorganic Chemistry, Materials Chemistry, Organic Chemistry","Inorganic, Organometallic and Materials Chemistry: Synthesis, Small Molecule Activation and New Transformations."
 "Galperin, Michael","Physical Chemistry, Theoretical & Computational Chemistry",Electron Transport in Condensed Phases. Dissipation and Relaxation Processes. Non-equilibrium Open Quantum Systems. Molecular Electronics.
@@ -24,7 +24,7 @@ faculty_name,faculty_specialty,faculty_research_topics
 "Herzik, Mark",Biochemistry & Molecular Biophysics,Elucidating the mechanisms of macromolecular transport into and within mitochondria
 "Jennings, Patricia","Biochemistry & Molecular Biophysics, Chemical Biology, Inorganic Chemistry","Biophysical chemistry: protein structure, dynamics and folding; 2, 3 and 4D NMR spectroscopy; PCR; equilibrium and kinetic-fluorescence, absorbance and circular dichroism spectroscopies"
 "Jinich, Adrian","Biochemistry & Molecular Biophysics, Theoretical & Computational Chemistry",
-"Jones, Lisa ","Biochemistry & Molecular Biophysics,  Chemical Biology",The Jones lab uses oxidative labeling for the structural characterization of proteins in their native cellular environment
+"Jones, Lisa","Biochemistry & Molecular Biophysics,  Chemical Biology",The Jones lab uses oxidative labeling for the structural characterization of proteins in their native cellular environment
 "Joseph, Simpson",Biochemistry & Molecular Biophysics,Molecular Mechanism of Protein Synthesis
 "Kim, Judy","Analytical & Atmospheric Chemistry, Biochemistry & Molecular Biophysics, Chemical Biology,  Physical Chemistry",Biophysical chemistry: Spectroscopic studies of membrane protein folding and dynamics
 "Klosterman, Jeremy","Chemical Education,  Organic Chemistry","Supramolecular Chemistry, Organic Photophysics, Crystal Engineering and Playing with Molecules in 3D"
@@ -54,7 +54,7 @@ faculty_name,faculty_specialty,faculty_research_topics
 "Siegel, Dionicio",Organic Chemistry,Complex Molecule Synthesis
 "Sinha, Amitabha","Analytical & Atmospheric Chemistry, Physical Chemistry",Experimental physical chemistry: photochemistry; laser spectroscopy; reaction dynamics of vibrationally excited molecules
 "Slade, Jonathan","Analytical & Atmospheric Chemistry, Physical Chemistry","Physical and Analytical Atmospheric Chemistry: Multiphase Chemistry and Kinetics of Atmospheric Aerosols and Trace Gases, and their Impacts on Air Quality and Climate"
-"Sous, John ","Materials Chemistry, Theoretical & Computational Chemistry",Quantum condensed matter
+"Sous, John","Materials Chemistry, Theoretical & Computational Chemistry",Quantum condensed matter
 "Stallings, Dontarie","Biochemistry & Molecular Biophysics, Chemical Education","Science Policy (w.r.t. Equity, Diversity, and Inclusion) | Programmatic Evaluation"
 "Stauber, Julia","Biochemistry & Molecular Biophysics,  Inorganic Chemsitry,  Materials Chemistry,  Organic Chemistry","Inorganic synthesis, organometallic synthesis, bioinorganic chemistry"
 "Tauber, Michael","Analytical & Atmospheric Chemistry, Materials Chemistry, Physical Chemistry",Physical chemistry; Optical and magnetic spectroscopy; Fundamental studies of charge transport and solvation; Applications to energy conversion and energy storage.
@@ -72,4 +72,4 @@ faculty_name,faculty_specialty,faculty_research_topics
 "Yong, Haiwang","Analytical & Atmospheric Chemistry, Physical Chemistry, Theoretical & Computational Chemistry",Experimental Physical Chemistry; Theoretical Spectroscopy; Ultrafast X-ray/Electron Scattering; Ultrafast Molecular Spectroscopy; Chemical Dynamics; Chirality
 "Young, Mark","Analytical & Atmospheric Chemistry, Chemical Education, Physical Chemistry","Chemistry of the atmosphere, hydrosphere, and lithosphere"
 "Yuen-Zhou, Joel","Physical Chemistry, Theoretical & Computational Chemistry",Quantum molecular photonics
-"Zid, Brian ",Biochemistry & Molecular Biophysics,Gene Expression Control During Stress; mRNA Localization to Membrane-Less Compartments
+"Zid, Brian",Biochemistry & Molecular Biophysics,Gene Expression Control During Stress; mRNA Localization to Membrane-Less Compartments
